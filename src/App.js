@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount(){
+    fetch('/sum?a=1&b=2').then(app=>console.log(app.json())).catch(err=>console.log(err))
+  }
   render() {
     return (
       <div className="App">
